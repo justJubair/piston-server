@@ -27,8 +27,17 @@ async function run() {
 
   
     const productsCollection = client.db("pistonDB").collection("products");
+    const brandsCollection = client.db("pistonDB").collection("brands")
+   
 
-    // product post endpoint
+    // brands post endpoint
+    app.post("/brands", async(req, res)=>{
+      const brand = req.body;
+      const result = await brandsCollection.insertOne(brand)
+      res.send(result)
+    })
+
+    // products post endpoint
     app.post("/products", async(req, res)=>{
       const product = req.body;
       const result = await productsCollection.insertOne(product)

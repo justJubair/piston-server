@@ -30,6 +30,13 @@ async function run() {
     const brandsCollection = client.db("pistonDB").collection("brands")
    
 
+
+    // brands get endpoint
+    app.get("/brands", async(req, res)=>{
+      const cursor = brandsCollection.find();
+      const result = await cursor.toArray();
+      res.send(result)
+    })
     // brands post endpoint
     app.post("/brands", async(req, res)=>{
       const brand = req.body;

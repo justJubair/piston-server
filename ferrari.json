@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.ibb.co/g4gJtQK/pexels-roman-pohorecki-2664399-Copy.jpg",
+    "name": "Ferrari 488 GTB",
+    "brand": "Ferrari",
+    "type": "Supercar",
+    "price": 329999,
+    "rating": 4,
+    "description": "The Ferrari 488 GTB is a high-performance supercar known for its incredible speed and aerodynamic design.",
+    "manufacture_year": 2022
+  },
+  {
+    "id": 2,
+    "img": "https://i.ibb.co/H2JqS6S/pexels-vincenzo-malagoli-2922140-Copy.jpg",
+    "name": "Ferrari Portofino",
+    "brand": "Ferrari",
+    "type": "Convertible",
+    "price": 249999,
+    "rating": 4,
+    "description": "The Ferrari Portofino is a luxurious convertible sports car offering a blend of style and performance.",
+    "manufacture_year": 2021
+  },
+  {
+    "id": 3,
+    "img": "https://i.ibb.co/fYwm4dG/pexels-jay-pizzle-3954429.jpg",
+    "name": "Ferrari GTC4Lusso",
+    "brand": "Ferrari",
+    "type": "Grand Tourer",
+    "price": 349999,
+    "rating": 5,
+    "description": "The Ferrari GTC4Lusso is a grand tourer, combining comfort and power for a remarkable driving experience.",
+    "manufacture_year": 2023
+  },
+  {
+    "id": 4,
+    "img": "https://i.ibb.co/1KH20XQ/pexels-auto-records-10292239.jpg",
+    "name": "Ferrari Supercar and Accessories Pack",
+    "brand": "Ferrari",
+    "type": "Supercar",
+    "price": 599,
+    "rating": 4,
+    "description": "Elevate your Ferrari experience with this pack, including a high-performance Ferrari supercar and exclusive Ferrari-branded items and gear.",
+    "manufacture_year": 2020
+  }
+]

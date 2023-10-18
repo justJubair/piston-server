@@ -1,11 +1,5 @@
 const express = require("express");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-const tesla = require("./tesla.json");
-const mclaren = require("./mclaren.json");
-const benz = require("./benz.json");
-const lambo = require("./lambo.json");
-const ferrari = require("./ferrari.json");
-const bmw = require("./bmw.json");
 const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;

@@ -27,6 +27,7 @@ async function run() {
 
     const productsCollection = client.db("pistonDB").collection("products");
     const brandsCollection = client.db("pistonDB").collection("brands");
+    const cartCollection = client.db("pistonDB").collection("cart");
 
     // brands get endpoint
     app.get("/brands", async (req, res) => {
@@ -50,16 +51,66 @@ async function run() {
     });
 
     // get a single product
-    app.get("/products/:id", async(req, res)=>{
+    app.get("/products/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id: new ObjectId(id)}
-      const result = await productsCollection.findOne(query)
-      res.send(result)
+      const query = { _id: new ObjectId(id) };
+      const result = await productsCollection.findOne(query);
+      res.send(result);
     });
     // products post endpoint
     app.post("/products", async (req, res) => {
       const product = req.body;
       const result = await productsCollection.insertOne(product);
+      res.send(result);
+    });
+
+    // MY CART RALATED ENDPOINT
+
+    // get my mycart endpoint
+    app.get("/cart", async (req, res) => {
+      const cursor = cartCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+
+    // // get a single product from my cart
+    // app.get("/cart/:id", async (req, res) => {
+    //   try {
+    //     const id = req.params.id;
+    //     const query = { _id: new ObjectId(id) };
+    //     const result = await cartCollection.findOne(query);
+    //     if (result) {
+    //       res.send(result);
+    //     } else {
+    //       res.status(404).send("Item not found");
+    //     }
+    //   } catch (error) {
+    //     console.error(error);
+    //     res.status(500).send("Internal Server Error");
+    //   }
+    // });
+
+    // delete a product from mycart
+    app.delete("/cart/:id", async (req, res) => {
+      try {
+        const id = req.params.id;
+        const query = { _id: new ObjectId(id) };
+        const result = await cartCollection.deleteOne(query);
+        if (result) {
+          res.send(result);
+        } else {
+          res.status(404).send("Item not fount");
+        }
+      } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+      }
+    });
+
+    // product added to my cart, post endpoint
+    app.post("/cart", async (req, res) => {
+      const product = req.body;
+      const result = await cartCollection.insertOne(product);
       res.send(result);
     });
 

@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/xKkfvRJ/pexels-mike-bird-120049.jpg",
+      "name": "Mercedes-Benz S-Class",
+      "brand": "Mercedes-Benz",
+      "type": "Luxury Sedan",
+      "price": 89999,
+      "rating": 4,
+      "description": "The Mercedes-Benz S-Class is a symbol of luxury and innovation, known for its advanced technology and comfort.",
+      "manufacture_year": 2022
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/GRXxp98/pexels-mike-bird-2365572.jpg",
+      "name": "Mercedes-Benz GLC",
+      "brand": "Mercedes-Benz",
+      "type": "SUV",
+      "price": 74999,
+      "rating": 4,
+      "description": "The Mercedes-Benz GLC is a versatile and luxurious SUV designed for both comfort and style.",
+      "manufacture_year": 2021
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/fYPn5MY/pexels-mike-bird-112452.jpg",
+      "name": "Mercedes-Benz E-Class",
+      "brand": "Mercedes-Benz",
+      "type": "Executive Sedan",
+      "price": 79999,
+      "rating": 5,
+      "description": "The Mercedes-Benz E-Class is an executive sedan that combines sophistication and performance.",
+      "manufacture_year": 2023
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/fD5v6LH/pexels-mike-bird-195636.jpg",
+      "name": "Mercedes-Benz Accessories Pack",
+      "brand": "Mercedes-Benz",
+      "type": "Accessories",
+      "price": 599,
+      "rating": 4,
+      "description": "Enhance your Mercedes-Benz experience with this accessories pack, featuring premium Mercedes-Benz-branded merchandise and gear.",
+      "manufacture_year": 2020
+    }
+  ]
+  

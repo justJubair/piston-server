@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/QPGZ3K7/pexels-trace-constant-707046.jpg",
+      "name": "BMW M5",
+      "brand": "BMW",
+      "type": "Sports Sedan",
+      "price": 79999,
+      "rating": 4,
+      "description": "The BMW M5 is a high-performance sports sedan known for its blend of power and luxury.",
+      "manufacture_year": 2022
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/cwZrpQ7/pexels-maria-geller-2127039.jpg",
+      "name": "BMW X3",
+      "brand": "BMW",
+      "type": "SUV",
+      "price": 59999,
+      "rating": 4,
+      "description": "The BMW X3 is a versatile SUV offering a comfortable and agile driving experience.",
+      "manufacture_year": 2021
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/52VYFwg/pexels-mike-bird-170811.jpg",
+      "name": "BMW 7 Series",
+      "brand": "BMW",
+      "type": "Luxury Sedan",
+      "price": 89999,
+      "rating": 5,
+      "description": "The BMW 7 Series is a luxurious sedan, setting the standard for elegance and performance.",
+      "manufacture_year": 2023
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/tcdMs5C/pexels-maria-geller-2127024.jpg",
+      "name": "BMW Accessories Pack",
+      "brand": "BMW",
+      "type": "Accessories",
+      "price": 499,
+      "rating": 4,
+      "description": "Enhance your BMW experience with this accessories pack, featuring BMW-branded merchandise and gear.",
+      "manufacture_year": 2020
+    }
+  ]
+  

@@ -2,6 +2,7 @@ const express = require("express");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const tesla = require("./tesla.json")
 const mclaren = require("./mclaren.json")
+const lambo = require("./lambo.json")
 const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
@@ -60,6 +61,10 @@ async function run() {
     // Mclaren
     app.get("/mclaren", (req, res)=>{
       res.send(mclaren)
+    })
+
+    app.get("/lambo", (req, res)=>{
+      res.send(lambo)
     })
    
 

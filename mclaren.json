@@ -6,7 +6,7 @@
         "brand": "McLaren",
         "type": "Sports Car",
         "price": 299999,
-        "rating": 4.5,
+        "rating": 4,
         "description": "The McLaren 720S is a high-performance sports car with breathtaking speed and aerodynamic design.",
         "manufacture_year": 2022
       },
@@ -17,7 +17,7 @@
         "brand": "McLaren",
         "type": "Sports Car",
         "price": 199999,
-        "rating": 4.8,
+        "rating": 4,
         "description": "The McLaren GT is a luxurious sports car with exceptional performance and comfort.",
         "manufacture_year": 2021
       },
@@ -28,7 +28,7 @@
         "brand": "McLaren",
         "type": "Sports Car",
         "price": 269999,
-        "rating": 4.6,
+        "rating": 5,
         "description": "The McLaren 600LT is a track-focused sports car known for its agility and speed.",
         "manufacture_year": 2023
       },
@@ -39,7 +39,7 @@
         "brand": "McLaren",
         "type": "Accessories",
         "price": 399,
-        "rating": 4.9,
+        "rating": 4,
         "description": "Enhance your McLaren experience with this accessories pack, including McLaren-branded merchandise and gear.",
         "manufacture_year": 2020
       }

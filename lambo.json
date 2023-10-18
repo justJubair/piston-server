@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "img": "https://i.ibb.co/w6LdDPN/pexels-maurice-lustig-2896135.jpg",
+      "name": "Lamborghini Aventador",
+      "brand": "Lamborghini",
+      "type": "Supercar",
+      "price": 399999,
+      "rating": 5,
+      "description": "The Lamborghini Aventador is an iconic supercar known for its jaw-dropping performance and distinctive design.",
+      "manufacture_year": 2022
+    },
+    {
+      "id": 2,
+      "img": "https://i.ibb.co/HKrjB40/pexels-adrian-dorobantu-2127733.jpg",
+      "name": "Lamborghini Huracán",
+      "brand": "Lamborghini",
+      "type": "Supercar",
+      "price": 299999,
+      "rating": 4,
+      "description": "The Lamborghini Huracán is a high-performance supercar with cutting-edge technology and exhilarating speed.",
+      "manufacture_year": 2021
+    },
+    {
+      "id": 3,
+      "img": "https://i.ibb.co/qnTG1R8/pexels-jay-pizzle-3802510.jpg",
+      "name": "Lamborghini Urus",
+      "brand": "Lamborghini",
+      "type": "SUV",
+      "price": 259999,
+      "rating": 5,
+      "description": "The Lamborghini Urus is a luxurious SUV that combines style and power for a unique driving experience.",
+      "manufacture_year": 2023
+    },
+    {
+      "id": 4,
+      "img": "https://i.ibb.co/zZQg0W3/pexels-szymon-shields-6152797.jpg",
+      "name": "Lamborghini Accessories Pack",
+      "brand": "Lamborghini",
+      "type": "Accessories",
+      "price": 499,
+      "rating": 4,
+      "description": "Elevate your Lamborghini experience with this accessories pack, including exclusive Lamborghini merchandise and gear.",
+      "manufacture_year": 2020
+    }
+  ]
+  

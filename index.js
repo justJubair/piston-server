@@ -1,5 +1,7 @@
 const express = require("express");
 const { MongoClient, ServerApiVersion } = require("mongodb");
+const tesla = require("./tesla.json")
+const mclaren = require("./mclaren.json")
 const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
@@ -28,7 +30,6 @@ async function run() {
   
     const productsCollection = client.db("pistonDB").collection("products");
     const brandsCollection = client.db("pistonDB").collection("brands")
-   
 
 
     // brands get endpoint
@@ -50,6 +51,17 @@ async function run() {
       const result = await productsCollection.insertOne(product)
       res.send(result)
     })
+
+    // specific brand product get endpoint tesla
+    app.get("/tesla", (req, res)=>{
+      res.send(tesla)
+    })
+
+    // Mclaren
+    app.get("/mclaren", (req, res)=>{
+      res.send(mclaren)
+    })
+   
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

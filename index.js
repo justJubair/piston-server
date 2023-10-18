@@ -55,34 +55,47 @@ async function run() {
       const result = await productsCollection.insertOne(product)
       res.send(result)
     })
-
+   
     // specific brand product get endpoint tesla
-    app.get("/tesla", (req, res)=>{
-      res.send(tesla)
+    app.get("/tesla", async(req, res)=>{
+      const cursor = productsCollection.find({"brand":"Tesla"})
+      const result = await cursor.toArray()
+      res.send(result)
     })
 
+
     // Mclaren
-    app.get("/mclaren", (req, res)=>{
-      res.send(mclaren)
+    app.get("/mclaren", async(req, res)=>{
+      const cursor = productsCollection.find({"brand":"McLaren"})
+      const result = await cursor.toArray()
+      res.send(result)
     })
 
     // mercedes benz
-    app.get("/benz", (req, res)=>{
-      res.send(benz)
+    app.get("/marcedes", async(req, res)=>{
+      const cursor = productsCollection.find({"brand":"Mercedes-Benz"})
+      const result = await cursor.toArray()
+      res.send(result)
     })
     // lamborghini
-    app.get("/lambo", (req, res)=>{
-      res.send(lambo)
+    app.get("/lamborghini", async(req, res)=>{
+      const cursor = productsCollection.find({"brand":"Lamborghini"})
+      const result = await cursor.toArray()
+      res.send(result)
     })
 
     // ferrari
-    app.get("/ferrari", (req, res)=>{
-      res.send(ferrari)
+    app.get("/ferrari", async(req, res)=>{
+      const cursor = productsCollection.find({"brand":"Ferrari"})
+      const result = await cursor.toArray()
+      res.send(result)
     })
 
     // bmw
-    app.get("/bmw", (req, res)=>{
-      res.send(bmw)
+    app.get("/bmw", async(req, res)=>{
+      const cursor = productsCollection.find({"brand":"BMW"})
+      const result = await cursor.toArray()
+      res.send(result)
     })
    
 

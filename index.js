@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const express = require("express");
-require('dotenv').config()
+require("dotenv").config();
 const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000;
@@ -9,8 +9,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri =
-  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.hf0b3tt.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.hf0b3tt.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -24,7 +23,7 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
-    // await client.connect();
+    await client.connect();
 
     const productsCollection = client.db("pistonDB").collection("products");
     const brandsCollection = client.db("pistonDB").collection("brands");
@@ -65,6 +64,27 @@ async function run() {
       res.send(result);
     });
 
+    // update a product, put endpoint
+    app.put("/products/:id", async (req, res) => {
+      const id = req.params.id;
+      const product = req.body;
+      const filter = { _id: new ObjectId(id) };
+      const options = { upsert: true };
+      const updatedProduct = {
+        $set: {
+          name: product.name,
+          img: product.photo,
+          brand: product.newBrand,
+          type: product.type,
+          price: product.price,
+          description: product.description,
+          rating: product.newRating,
+        },
+      };
+      const result = await productsCollection.updateOne(filter, updatedProduct, options)
+      res.send(result)
+    });
+
     // MY CART RALATED ENDPOINT
 
     // get my mycart endpoint
@@ -74,22 +94,7 @@ async function run() {
       res.send(result);
     });
 
-    // // get a single product from my cart
-    // app.get("/cart/:id", async (req, res) => {
-    //   try {
-    //     const id = req.params.id;
-    //     const query = { _id: new ObjectId(id) };
-    //     const result = await cartCollection.findOne(query);
-    //     if (result) {
-    //       res.send(result);
-    //     } else {
-    //       res.status(404).send("Item not found");
-    //     }
-    //   } catch (error) {
-    //     console.error(error);
-    //     res.status(500).send("Internal Server Error");
-    //   }
-    // });
+    
 
     // delete a product from mycart
     app.delete("/cart/:id", async (req, res) => {
